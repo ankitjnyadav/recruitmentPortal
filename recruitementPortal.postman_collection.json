@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "0b6c9b5e-8e48-4386-950b-633d40505ece",
+		"name": "recruitementPortal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "a8dc5e5a-e107-4ee9-b66f-21a14660bb71",
+			"name": "Jobs",
+			"item": [
+				{
+					"_postman_id": "46b6d69d-d5b9-46ad-9218-37600b17d28a",
+					"name": "GET Jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/jobs/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "2e3fa240-c980-4a18-95ea-20ba9dc0c1db",
+					"name": "POST Jobs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"jobId\":\"2\",\n\t\"post\":\"Sr Software Developer\",\n\t\"exp\":\"10 Year\",\n\t\"location\":\"Hyderabad\"\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/jobs",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "ce0ba3b0-ae4d-473f-af95-bffd6bc38099",
+					"name": "PUT Jobs",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"jobId\":\"1\",\n\t\"post\":\"Sr. SDET\",\n\t\"exp\":\"15 Year\",\n\t\"location\":\"Mumbai\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/jobs/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "2afbc649-0d57-4118-8648-ee16bd9bc0fb",
+					"name": "DELETE Jobs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/jobs/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0f6eaca6-bc7f-45da-837b-7c567718cfdd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "927e0102-a894-432f-a537-05d24bc45020",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"_postman_id": "f888347e-3e80-40e2-af31-e2261b5aafaf",
+			"name": "Applicant",
+			"item": [
+				{
+					"_postman_id": "73bd8aad-eaa3-4875-a304-bd3a92ff3a3a",
+					"name": "Apply Jobs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"testUser\",\n\t\"name\":\"Test Tester\",\n\t\"email\":\"test@Test.com\",\n\t\"exp\":\"1 Year\"\n\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/jobs/2/apply",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"2",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "8a730b5b-073d-4719-bd72-a02e828dada3",
+					"name": "Update Application",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"ankity\",\n\t\"name\":\"Ankit Yadav\",\n\t\"email\":\"ay@test.com\",\n\t\"exp\":\"1 Year\"\n\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/jobs/2/applications/ankity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"2",
+								"applications",
+								"ankity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "13d4ed2c-c35a-4aaa-b044-5da65d419e9c",
+					"name": "Get Application",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"jobId\":\"1\",\n\t\"profileName\":\"Sr. Software Developer\",\n\t\"jobLocation\":\"Mumbai\",\n\t\"minExperience\":\"11 Year\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/jobs/1/applications/ankity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"1",
+								"applications",
+								"ankity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "9eeac579-7f02-4aaf-957a-6cf003f5ffd8",
+					"name": "DELETE Application",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/jobs/2/applications/ankity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"2",
+								"applications",
+								"ankity"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0f6eaca6-bc7f-45da-837b-7c567718cfdd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "927e0102-a894-432f-a537-05d24bc45020",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
