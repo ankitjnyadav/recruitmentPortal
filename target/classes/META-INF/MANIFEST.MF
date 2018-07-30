@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: recruitmentPortal
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: AY-Admin
+Implementation-Vendor-Id: com.ay.course.api-data
+Build-Jdk: 1.8.0_181
+Implementation-URL: http://projects.spring.io/spring-boot/recruitmentP
+ ortal/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
